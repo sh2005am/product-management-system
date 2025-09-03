@@ -39,7 +39,7 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)}/>
                 
                 <button type='submit' className='btn'>Login</button>
-            
+                new to product manager? <button className='altBtn' onClick={() => navigate("/signup")} >signup</button>
             </div>
             </form>
         </div>

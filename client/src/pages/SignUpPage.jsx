@@ -47,7 +47,7 @@ const SignUpPage = () => {
                     onChange={(e) => setPassword(e.target.value)}/>
                 
                 <button type='submit' className='btn'>Signup</button>
-            
+                already have an account? <button className='altBtn' onClick={() => navigate("/login")} >signup</button>
             </div>
             </form>
         </div>
