@@ -60,6 +60,10 @@ const ProductsPage = () => {
         setIsAddFormOpen(false);
         setIsEditFormOpen(false);
     };
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate('/login');
+    }
 
     const filteredProducts = products.filter(pr =>
         pr.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -75,6 +79,8 @@ const ProductsPage = () => {
                 <h1>Product Holo-deck</h1>
                 <input type="text" placeholder="Search Products" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
             </div>
+            <div className="center"> <div className="logoutbtn" onClick={handleLogout}>logout</div></div>
+           
             <div className="prods">
                 {filteredProducts.map(pr => (
                     <Cards 
