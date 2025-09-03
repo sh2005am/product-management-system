@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getProducts } from '../api/productApi.js';
-import './productsPage.css';
+import './ProductsPage.css';
 import { useNavigate } from 'react-router-dom';
 import Cards from './components/Cards.jsx';
 import { IoMdAddCircle } from "react-icons/io";
