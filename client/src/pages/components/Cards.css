@@ -1,0 +1,90 @@
+
+.card {
+    display: flex;
+    position: relative;
+    padding-top: 8px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.2rem;
+    width: 248px;
+    border: none;
+    transition: all 0.22s ease-in-out;
+}
+ .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(4, 0, 0, 0.132); /* Semi-transparent black */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+ }
+.card:hover .card-overlay {
+    opacity: 1;
+}
+.card:hover {
+    scale: 1.1;
+}
+.card-down {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    gap: 4px;
+}
+.card-down .features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stock {
+    color: rgb(13, 205, 13);
+}
+.icons .edit,
+.icons .delete {
+  background: rgba(204, 197, 250, 0.212);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 4px;
+  transition: all 0.2s ease-in-out;
+  z-index: 5;
+}
+
+.icons .edit path,
+.icons .delete path {
+  color: rgb(111, 5, 5) !important;
+}
+.icons .edit:hover,
+.icons .delete:hover{
+  
+  scale: 1.25;
+}
+.icons .edit:hover path,
+.icons .delete:hover path {
+  color: #a80000 !important;
+  background-color: rgba(0, 0, 0, 0.615) !important;
+}
+
+
+.card-up img {
+    object-fit: cover;
+    border-radius: 1.2rem;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding-top: 24px;
+}
+@media screen and (max-width: 500px) {
+.card{
+    width: 80%;
+}
+.card-up img {
+    width: 100%;
+}
+}

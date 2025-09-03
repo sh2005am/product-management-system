@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    align-items: center;
+}
+.top h1 {
+    font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.glass-effect {
+            background: rgba(204, 197, 250, 0.212);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+.top input {
+   width: 30%;
+   height: 2.8rem;
+   border-radius: 1.2rem;
+   padding: 2px 8px;
+   background-color: rgba(176, 171, 219, 0.121);
+   backdrop-filter: blur(10px);
+   font-size: 16px;
+   border: none;
+   transform-origin: right;
+   color: rgb(233, 229, 229);
+}
+.top input:focus{
+    transform: scaleX(1.2);
+}
+.top input::placeholder{
+    color: rgb(185, 172, 172);
+}
+
+.prods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.add {
+    z-index: 1000;
+    font-size: 80px;
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+
+
+}
+.add path {
+    color: rgba(61, 108, 174, 0.889);
+}
+.add:hover path {
+    color: rgba(135, 164, 205, 0.889);
+}
+.add:active path{
+    color:rgb(174, 174, 171);
+}
+#form-container , #form-container1 {
+    position: fixed;
+    z-index: 1001;
+    height: 98vh;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+#form-container.hidden {
+    background-color: yellow;
+    transform: translateX(100%);
+    opacity: 0;
+    
+}
+#form-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#form-container1.hidden {
+    background-color: yellow;
+    transform: translateX(100%);
+    opacity: 0;
+    
+}
+#form-container1 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formcomp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.formcomp input {
+    width: 98%;
+     background: rgba(120, 117, 127, 0.353);
+    font-size: 32px;
+    border-radius: 0.4rem;
+    padding: 8px 12px;
+}
+.formcomp input::placeholder {
+    color: rgb(126, 122, 122);
+}
+.formcomp input:focus {
+    color: rgb(208, 205, 216);
+    background-color: rgba(0, 0, 0, 0.763);
+    outline: none;
+}
+.formcomp label {
+    color: whitesmoke;
+}
+.sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    gap: 12px;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 60px;
+}
+.btns button {
+    width: 10rem;
+    font-size: large;
+    border-radius: 0.6rem;
+    height: 3.6rem;
+    background-color: green;
+}
+button.discard{
+    background-color: rgb(241, 86, 9);
+}
+@media only screen and (max-width: 600px) {
+      .top {
+        flex-direction: column;;
+         gap: 12px;
+         padding: 4px 8px;
+      }
+      .top input {
+        width: 90%;
+
+      }
+      .top input:focus {
+        transform: none;
+      }
+      .top h1 {
+        font-size: 32px;
+      }
+      #form-container {
+        width: 96%;
+        height:90vh;
+        margin: 0 10px;
+      }
+} 
+
+@media only screen and (max-width: 360px) {
+     .top h1 {
+        font-size: 24px;
+     }
+}
