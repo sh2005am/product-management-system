@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, } from 'react'
 import Axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import './LoginPage.css'
@@ -39,9 +39,10 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)}/>
                 
                 <button type='submit' className='btn'>Login</button>
-                new to product manager? <button className='altBtn' onClick={() => navigate("/signup")} >signup</button>
+               
             </div>
             </form>
+             new to product manager? <button className='altBtn' onClick={() => navigate("/signup")} >signup</button>
         </div>
         </div>
     )
